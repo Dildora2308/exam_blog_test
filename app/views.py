@@ -28,3 +28,4 @@ class PostDetailAPIView(generics.RetrieveAPIView):
 def get_serializer_class(self):
         if self.request.method == 'GET':
             return serializers.PostListSerializer
+        return serializers.PostUpdateSerializer
