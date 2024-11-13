@@ -25,3 +25,7 @@ class Post(models.Model):
     author = models.CharField(max_length=100)
     views = models.IntegerField(default=0)
     category = models.ForeignKey(Category, on_delete=models.PROTECT)
+
+
+    def str(self):
+        return self.title
